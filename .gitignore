@@ -1,0 +1,50 @@
+# Ignorar archivos y carpetas de compilación
+bin/
+obj/
+
+# Archivos de configuración del entorno de Visual Studio y editores
+.vs/
+.vscode/
+.idea/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Ignorar archivos generados automáticamente
+App_Data/
+artifacts/
+
+# Ignorar archivos sensibles
+.env
+secrets.json
+*.pfx
+
+# Ignorar logs y archivos temporales
+*.log
+*.tmp
+
+# Ignorar carpetas de paquetes
+packages/
+node_modules/
+
+# Ignorar archivos de configuración de Azure
+publish/
+docker-compose.override.yml
+
+# Ignorar archivos de bases de datos locales
+*.mdf
+*.ldf
+
+# Ignorar archivos específicos de sistemas operativos
+Thumbs.db
+Desktop.ini
+
+# Ignorar archivos de dependencias de npm (si tienes un proyecto frontend)
+npm-debug.log
+yarn-error.log
+
+# Ignorar el archivo de configuración de NPM (si prefieres mantenerlo en Git, elimina esta línea)
+package-lock.json
