@@ -5,8 +5,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using dotenv.net;
+using System.Collections;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Cargar variables desde .env
+DotEnv.Load();
+
+// Agregar las variables de entorno cargadas a la configuración
+builder.Configuration.AddEnvironmentVariables();
+
+Console.WriteLine("Cadena de conexión desde configuración: " + builder.Configuration["ConnectionStrings:DefaultConnection"]);
+
+//imprimir la cadena de conexión de .env
+Console.WriteLine("Cadena de conexión: " + builder.Configuration.GetConnectionString("DefaultConnection"));
 
 // Configurar JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
