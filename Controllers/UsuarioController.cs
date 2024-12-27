@@ -1,6 +1,7 @@
 ﻿
 using ApiGrupoOptico.Models;
 using ApiGrupoOptico.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace ApiGrupoOptico.Controllers
    
     [ApiController]     
     [Route("api/[controller]")]
+    [Authorize]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _service;

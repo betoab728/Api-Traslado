@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ApiGrupoOptico.Services;
 using ApiGrupoOptico.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiGrupoOptico.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]  // Esto protege todas las rutas dentro del controlador
     public class TiendaController : ControllerBase
     {
         private readonly ITiendaService _tiendaService;

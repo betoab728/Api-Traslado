@@ -37,8 +37,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
           IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
          };
     });
-    
 
+
+// Agregar servicios de autorización
+builder.Services.AddAuthorization();
 
 // Agregar DbContext con la cadena de conexión
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

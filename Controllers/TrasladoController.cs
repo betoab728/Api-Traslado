@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ApiGrupoOptico.Services;  
 using ApiGrupoOptico.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiGrupoOptico.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class TrasladoController : ControllerBase
     {
         private readonly ITrasladoService _trasladoService;
