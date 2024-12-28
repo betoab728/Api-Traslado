@@ -1,7 +1,5 @@
 ﻿﻿# Etapa 1: Compilar la aplicación
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-# Define el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copiar los archivos del proyecto y restaurar las dependencias

@@ -55,7 +55,8 @@ namespace ApiGrupoOptico.Services
                 {
                     Idproducto = reader.GetInt32(reader.GetOrdinal("idproducto")),
                     Descripcion = reader.GetString(reader.GetOrdinal("producto")),
-                    Stock = reader.GetInt32(reader.GetOrdinal("stock"))
+                    Stock = reader.GetInt32(reader.GetOrdinal("stock")),
+                    Codigo = reader.GetString(reader.GetOrdinal("codigo"))
 
                 };
             }
